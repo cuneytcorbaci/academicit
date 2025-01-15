@@ -52,9 +52,9 @@ Use the `BLANK_README.md` to get started.
   <p align="center"><strong>İçindekiler</strong></p>
   <ol>
     <li>
-      <a href="/Docker/">Docker</a>
+      <a href="https://github.com/cuneytcorbaci/academicit/tree/main/Docker/Docker%20Compose">Docker</a>
       <ul>
-        <li><a href="/Docker/Docker Compose/">Docker Compose Dosyaları</a></li>
+        <li><a href="https://github.com/cuneytcorbaci/academicit/tree/main/Docker/Docker%20Compose">Docker Compose Dosyaları</a></li>
       </ul>
     </li>
     <li>
