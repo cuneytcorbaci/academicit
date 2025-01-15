@@ -1,2 +1,3 @@
-# Hey
- Deneme
+# Bilişim Notları
+
+Merhaba Kendi Kullandığım Notlarımdır.
