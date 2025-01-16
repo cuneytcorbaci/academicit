@@ -1,15 +1,24 @@
 version: '3.8'
 
 services:
-  # Apache ve PHP service
-  web:
-    image: php:8-apache
-    container_name: php-apache-container
+  app:
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+    container_name: ccorbaci-app
+    restart: always
+    working_dir: /var/www
+    volumes:
+      - ../src:/var/www
+  nginx:
+    image: nginx:1.19-alpine
+    container_name: ccorbaci-nginx
+    restart: always
     ports:
       - "8080:80"
     volumes:
-      - ./web:/var/www/html
-
+      - ../src:/var/www
+      - ./nginx:/etc/nginx/conf.d
   # MySQL service
   mysql:
     image: mysql:8.0
@@ -25,7 +34,7 @@ services:
       MYSQL_PASSWORD: P@ssw0rdc
     volumes:
       - ./mysql-data:/var/lib/mysql
-
+      
   # phpMyAdmin service
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
