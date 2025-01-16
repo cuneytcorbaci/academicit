@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  # Apache ve PHP servisi
+  # Apache ve PHP service
   web:
     image: php:8-apache
     container_name: php-apache-container
@@ -10,7 +10,7 @@ services:
     volumes:
       - ./web:/var/www/html
 
-  # MySQL servisi
+  # MySQL service
   mysql:
     image: mysql:8.0
     networks:
@@ -19,14 +19,14 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: rootroot12345
+      MYSQL_ROOT_PASSWORD: P@ssw0rdc
       MYSQL_DATABASE: database1
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root12345
+      MYSQL_USER: ccorbaci
+      MYSQL_PASSWORD: P@ssw0rdc
     volumes:
       - ./mysql-data:/var/lib/mysql
 
-  # phpMyAdmin servisi
+  # phpMyAdmin service
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     networks:
